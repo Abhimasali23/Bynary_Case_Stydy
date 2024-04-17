@@ -24,8 +24,6 @@ a:active {
   background-color: #E72929; 
 }
 
-
-
 th {
   height: 100%;
 }
@@ -51,10 +49,30 @@ th {
   background-color: #f2f2f2; 
   font-weight: bold; 
 }
+
+h1 {
+  text-align: center;
+}
+
+.head {
+  display: flex;
+}
+
+#goback {
+  margin-left: 200px;
+  margin-top: 30px;
+  background-color: #5356FF;
+  height: 20px;
+  width: 60px;
+}
+
 </style>
 
 <div class="manage">
-  <h1 class="Header">Manage Service Requests</h1>
+  <div class="head">
+    <h1 class="Header">Manage Service Requests</h1>
+    <a id="goback" href="{{request.META.HTTP_REFERER}}">Go Back</a>
+  </div>
 
   <table class="table">
     <thead>
@@ -77,6 +95,7 @@ th {
           <td>{{servicerequest.description}}</td>
           <td>{{servicerequest.status}}</td>      
           <td><a id="edit" href="{% url 'update_request' servicerequest.id %}">Edit</a></td> 
+          <td><a id="edit" href="{% url 'delete_request' servicerequest.id %}">Delete</a></td> 
         </tr>
       {% endfor %}      
     </tbody>

@@ -28,3 +28,13 @@ def update_request(request, pk):
     
     context = {'form': form}
     return render(request, 'service_requests/submit_request.html', context)
+
+
+def delete_request(request, pk):
+    requests = ServiceRequest.objects.get(id=pk)
+    if request.method == 'POST':
+        requests.delete()
+        return redirect('manage')
+
+    context = {'item': requests}
+    return render(request, 'customer_support/delete.html', context)

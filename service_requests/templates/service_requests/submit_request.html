@@ -4,8 +4,26 @@
 
 <style>
 
+#goback {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5356FF;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 250px;
+}
 
+#goback:hover {
+  background-color: #5755FE; 
+}
 
+#goback:active {
+  background-color: #0E46A3; 
+}
 
 input {
   width: 200px; 
@@ -89,7 +107,16 @@ button:active {
 
 </style>
   
-  <h2>Submit Service Request</h2>
+  
+  {% comment %} <h2>Submit Service Request</h2>
+  <a id="goback" href="{{request.META.HTTP_REFERER}}">Go Back</a> {% endcomment %}
+  <div style="display: inline-block;">
+    <h2>Submit Service Request</h2>
+  </div>
+  <div style="display: inline-block;">
+    <a id="goback" href="{{request.META.HTTP_REFERER}}">Go Back</a>
+  </div>
+
   <form method="post" action="">
     {% csrf_token %}
     {{ form }}
