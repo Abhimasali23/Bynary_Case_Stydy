@@ -9,3 +9,11 @@ The Application mainly focused on the customer service request and support
 ![image](https://github.com/Abhimasali23/Bynry_Case_Stydy/assets/84769906/d81cdec9-dee8-4cda-a715-efdb064033d9)
 ![image](https://github.com/Abhimasali23/Bynry_Case_Stydy/assets/84769906/3b8711d5-a26d-4d5a-aab5-cf79a37f7dbe)
 ![image](https://github.com/Abhimasali23/Bynry_Case_Stydy/assets/84769906/abc88b8e-6dfc-448b-8ea7-93e42e7a4a9f)
+
+Updated Pages
+![image](https://github.com/Abhimasali23/Bynry_Case_Stydy/assets/84769906/b09976d9-1ef0-4d5d-a105-0c1d1d1efaaa)
+![image](https://github.com/Abhimasali23/Bynry_Case_Stydy/assets/84769906/bb766230-4ccc-4d8a-b8bb-c24fb70ccc84)
+![image](https://github.com/Abhimasali23/Bynry_Case_Stydy/assets/84769906/f4c937f7-1fbb-4a08-8cd6-7c2afff8c4ea)
+![image](https://github.com/Abhimasali23/Bynry_Case_Stydy/assets/84769906/409c3e24-1517-4732-9572-3ad4ff3d8ff1)
+![image](https://github.com/Abhimasali23/Bynry_Case_Stydy/assets/84769906/1ada45fd-6792-4fa5-9b46-7cdfc838e8a6)
+
