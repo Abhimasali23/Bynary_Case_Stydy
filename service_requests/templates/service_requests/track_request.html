@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5356FF;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 250px;
+}
+
+a:hover {
+  background-color: #5755FE; 
+}
+
+a:active {
+  background-color: #0E46A3; 
+}
+
+div {
+  display: flex;
+}
+
+
+th {
+  height: 100%;
+}
+
+  
+table {
+  width: 100%; 
+  border-collapse: collapse; 
+}
+
+
+tr {
+  border-bottom: 1px solid #ddd; 
+}
+
+
+td, th {
+  padding: 8px; 
+  text-align: left; 
+}
+
+th {
+  background-color: #f2f2f2; 
+  font-weight: bold; 
+}
+
+input[type="text"] {
+  width: 200px; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  box-sizing: border-box; 
+  font-size: 16px; 
+}
+
+input[type="text"]:focus {
+  outline: none; 
+  border-color: #007bff; 
+  box-shadow: 0 0 5px #007bff; 
+}
+
+</style>
+
+  <div>
+    <form method="GET" action="{% url 'track_request' %}">
+      <input type="text" name="q" placeholder="Search Your Request..."  />
+    </form>
+    
+    <a href="{% url 'customer' %}">Go To Home</a>
+  </div>
+    
+  <h2>Track Service Requests</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Request Type</th>
+        <th>Description</th>
+        <th>Status</th>        
+      </tr>
+    </thead>
+    <tbody>
+      {% for servicerequest in servicerequests %}
+        <tr>
+          <td>{{servicerequest.id}}</td>
+          <td>{{servicerequest.customer_name}}</td>
+          <td>{{servicerequest.customer_email}}</td>
+          <td>{{servicerequest.request_type}}</td>
+          <td>{{servicerequest.description}}</td>
+          <td>{{servicerequest.status}}</td>                    
+          {% comment %} <td>{{servicerequest.file}}</td> {% endcomment %}
+        </tr>
+      {% endfor %}      
+    </tbody>
+  </table>
+{% endblock %}

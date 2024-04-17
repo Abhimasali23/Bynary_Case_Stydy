@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Request Submitted</h2>
+  <p>Your service request has been submitted successfully.</p>
+  <p>You can track the status of your request <a href="{% url 'track_request' %}">here</a>.</p>
+{% endblock content %}
+

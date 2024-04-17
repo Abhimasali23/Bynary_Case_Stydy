@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #E72929;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a:hover {
+  background-color: #E72929; 
+}
+
+a:active {
+  background-color: #E72929; 
+}
+
+
+
+th {
+  height: 100%;
+}
+
+  
+table {
+  width: 100%; 
+  border-collapse: collapse; 
+}
+
+
+tr {
+  border-bottom: 1px solid #ddd; 
+}
+
+
+td, th {
+  padding: 8px; 
+  text-align: left; 
+}
+
+th {
+  background-color: #f2f2f2; 
+  font-weight: bold; 
+}
+</style>
+
+<div class="manage">
+  <h1 class="Header">Manage Service Requests</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Request Type</th>
+        <th>Description</th>
+        <th>Status</th>        
+      </tr>
+    </thead>
+    <tbody>
+      {% for servicerequest in servicerequests %}
+        <tr>
+          <td>{{servicerequest.id}}</td>
+          <td>{{servicerequest.customer_name}}</td>
+          <td>{{servicerequest.customer_email}}</td>
+          <td>{{servicerequest.request_type}}</td>
+          <td>{{servicerequest.description}}</td>
+          <td>{{servicerequest.status}}</td>      
+          <td><a id="edit" href="{% url 'update_request' servicerequest.id %}">Edit</a></td> 
+        </tr>
+      {% endfor %}      
+    </tbody>
+  </table>
+
+</div>
+
+
+{% endblock content %}

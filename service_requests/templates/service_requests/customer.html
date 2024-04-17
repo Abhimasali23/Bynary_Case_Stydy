@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Customer</h1>
+
+<style>
+  #cr, #ts {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5356FF;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+a:hover {
+  background-color: #5755FE; 
+}
+
+a:active {
+  background-color: #0E46A3; 
+}
+
+</style>
+
+
+<div>
+    <a id="cr" href="{% url 'submit_request' %}">Create a Request<a/>  <br>     
+    <a id="ts" href="{% url 'track_request' %}">Track Service Requests</a>
+</div>
+
+
+{% endblock content %}
+

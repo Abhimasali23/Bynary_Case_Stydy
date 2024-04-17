@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Gas Utility Project{% endblock %}</title>    
+</head>
+<style>
+
+
+    .box {
+    width: 650px; 
+    height: 600px; 
+    background-color: #ffffff; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    margin-top: 40px;
+    margin-left: 500px;    
+    padding: 20px;
+    justify-content: center;
+}
+
+
+    {% comment %} .container{
+        
+        margin: auto;
+        width: 50%;    
+        padding: 10px;
+        justify-content: center;
+    }   {% endcomment %}
+    
+    #title {
+        text-align:center;
+    }
+
+    #footer{
+        margin-top: 30px;
+        text-align:center;
+    }
+
+</style>
+<body class="box">
+    <header>
+        <h1 id="title">Gas Utility Project</h1>
+    </header>
+
+    
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p id="footer">&copy; 2024 Gas Utility Project. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

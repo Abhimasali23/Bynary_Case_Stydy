@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+    
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5356FF;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a:hover {
+  background-color: #5755FE; 
+}
+
+a:active {
+  background-color: #0E46A3; 
+}
+</style>
+
+
+<h1>Manager</h1>
+
+<div>
+    <a href="{% url 'manage' %}">Manage Requests</a>
+</div>
+
+
+{% endblock content %}
+

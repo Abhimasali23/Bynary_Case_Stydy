@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+
+  
+
+  a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5356FF;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+a:hover {
+  background-color: #5755FE; 
+}
+
+a:active {
+  background-color: #0E46A3; 
+}
+
+</style>
+
+<div id="base">
+    <h1>Welcome to the Gas Utility Service Requests</h1>
+    <p>This is the home page of the Gas Utility Service Requests application.</p>
+    <p>Here, you can view and manage service requests.</p>
+
+    <hr>
+
+    <a href="{% url 'customer' %}">Customer</a> 
+    <a href="{% url 'manager' %}">Manager</a>
+
+    <hr>   
+
+</div>
+
+{% endblock  %}
+
+
