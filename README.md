@@ -1,4 +1,7 @@
 Here Are Some of the Screen Shots of the Appilcation
+
+The Application mainly focused on the customer service request and support 
+
 ![image](https://github.com/Abhimasali23/Bynry_Case_Stydy/assets/84769906/18aa7c36-fece-4690-8331-130d6083bedf)
 ![image](https://github.com/Abhimasali23/Bynry_Case_Stydy/assets/84769906/1bbb97e7-de1c-49e6-9971-c2d4e24e0bd8)
 ![image](https://github.com/Abhimasali23/Bynry_Case_Stydy/assets/84769906/e857a266-04ca-4a42-a30d-2022c3bb3a26)
