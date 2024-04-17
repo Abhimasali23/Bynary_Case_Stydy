@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from service_requests.models import ServiceRequest
+from service_requests.forms import ServiceRequestForm
 
 
 def manager(request):   
@@ -13,11 +14,17 @@ def manage(request):
     
     return render(request, 'customer_support/manage_requests.html', context)
 
-def update_request_status(request, request_id):
-    service_request = get_object_or_404(ServiceRequest, id=request_id)
+def update_request(request, pk):
+    requests = ServiceRequest.objects.get(id=pk)
+    form = ServiceRequestForm(instance=requests)
+    
+
     if request.method == 'POST':
-        status = request.POST.get('status')
-        service_request.status = status
-        service_request.save()
-       
-    return render(request, 'customer_support/update_request_status.html', {'request': service_request})
+        form = ServiceRequestForm(request.POST, request.FILES, instance=requests)
+        
+        if form.is_valid():            
+            form.save()
+            return redirect('manage')
+    
+    context = {'form': form}
+    return render(request, 'service_requests/submit_request.html', context)

@@ -44,21 +44,6 @@ def track_request(request):
     return render(request, 'service_requests/track_request.html', context)
 
 
-def update_request(request, pk):
-    requests = ServiceRequest.objects.get(id=pk)
-    form = ServiceRequestForm(instance=requests)
-    
-
-    if request.method == 'POST':
-        form = ServiceRequestForm(request.POST, request.FILES, instance=requests)
-        
-        if form.is_valid():            
-            form.save()
-            return redirect('home')
-    
-    context = {'form': form}
-    return render(request, 'service_requests/submit_request.html', context)
-
 def customer(request):
     return render(request, 'service_requests/customer.html')
 
